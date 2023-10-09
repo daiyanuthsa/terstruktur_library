@@ -1,9 +1,13 @@
 <?php
-function delete($i)
+function delete($i )
 {
-    $cookie_name = "cart";
-    $cart = json_decode($_COOKIE[$cookie_name], true);
-    array_splice($cart, $i, 1);
-    setcookie($cookie_name, json_encode($cart));
+    $link = new mysqli(
+        "127.0.0.1",
+        "root",
+        "",
+        "perpus_terstruktur"
+    );
+    $query = "DELETE FROM CART WHERE idCART = $i";
+    $result = $link->query($query);
 }
 ?>

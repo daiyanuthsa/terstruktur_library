@@ -12,7 +12,7 @@ switch ($fitur) {
         $peminjaman_id = $_GET['peminjaman_id'];
         $buku_id = $_GET['buku_id'];
         kembali($peminjaman_id, $buku_id);
-        header('location:http://localhost/perpustakaan_terstruktur');
+        header('location:http://localhost:8080/perpustakaan_terstruktur');
         break;
     case 'cari':
     default:

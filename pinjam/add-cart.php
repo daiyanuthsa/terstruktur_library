@@ -1,11 +1,13 @@
 <?php
 function add($idbuku, $judul)
 {
-    $cookie_name = "cart";
-    $cart = json_decode($_COOKIE[$cookie_name], true);
-    $buku[]=$idbuku;
-    $buku[]=$judul;
-    $cart[]=$buku;
-    setcookie($cookie_name, json_encode($cart));
+    $link = new mysqli(
+        "127.0.0.1",
+        "root",
+        "",
+        "perpus_terstruktur"
+    );
+    $query = "INSERT INTO CART (buku_idbuku) VALUES ($idbuku)";
+    $result = $link->query($query);
 }
 ?>

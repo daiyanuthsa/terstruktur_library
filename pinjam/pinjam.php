@@ -19,7 +19,7 @@ switch ($fitur) {
         break;
     case 'save':
         save();
-        header('location:http://localhost/perpustakaan_terstruktur');
+        header('location:http://localhost:8080/perpustakaan_terstruktur');
         break;
     case 'read':
     default:

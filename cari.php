@@ -7,7 +7,13 @@ function cari($keyword)
         "",
         "perpus_terstruktur"
     );
-    $query = "SELECT idbuku, judul, PENERBIT FROM buku WHERE judul LIKE '%$keyword%' ";
+    $query = "SELECT b.idbuku, b.judul, b.PENERBIT
+                FROM buku b
+                WHERE b.idbuku NOT IN (SELECT buku_idbuku FROM CART)
+                AND b.idbuku NOT IN (SELECT buku_idbuku FROM dipinjam dp
+                                    JOIN peminjaman p ON dp.peminjaman_idpeminjaman = p.idpeminjaman
+                                    WHERE p.tanggal_kembali IS NULL)
+                AND b.judul LIKE '%$keyword%'";
     $result = mysqli_query($link, $query);
     $listbuku = []; // Initialize $listbuku as an empty array
     while ($row = mysqli_fetch_array($result)) {
@@ -39,11 +45,13 @@ function displayPinjam()
 {
     $link = mysqli_connect("127.0.0.1", "root", "", "perpus_terstruktur");
     $query = "SELECT dp.peminjaman_idpeminjaman AS peminjaman_id, 
-       b.judul, 
-       dp.hari, 
-       dp.buku_idbuku AS buku_id
-FROM dipinjam dp
-JOIN buku b ON dp.buku_idbuku = b.idbuku;";
+                    b.judul, 
+                    dp.hari, 
+                    dp.buku_idbuku AS buku_id
+                FROM dipinjam dp
+                JOIN buku b ON dp.buku_idbuku = b.idbuku
+                JOIN peminjaman p ON dp.peminjaman_idpeminjaman = p.idpeminjaman
+                WHERE p.tanggal_kembali IS NULL";
     $result = mysqli_query($link, $query);
     $listPinjam = [];
     while ($row = mysqli_fetch_array($result)) {
@@ -59,7 +67,13 @@ JOIN buku b ON dp.buku_idbuku = b.idbuku;";
         </tr>";
     $rowNum = 1;
     foreach ($listPinjam as $row) {
-        echo "<tr><td style='text-align: center;'>$rowNum</td><td> $row[1] </td><td style='text-align: center;'>$row[2]</td><td style='text-align: center;'><a href='fitur.php?fitur=kembali&peminjaman_id=$row[0]&buku_id=$row[3]'>kembalikan</td></tr>";
+        echo "<tr>
+            <td style='text-align: center;'>$rowNum</td>
+            <td> $row[1] </td>
+            <td style='text-align: center;'>$row[2]</td>
+            <td style='text-align: center;'>
+                <a href='fitur.php?fitur=kembali&peminjaman_id=$row[0]&buku_id=$row[3]'>kembalikan
+                </td></tr>";
         $rowNum++;
     }
     echo "</table>";
