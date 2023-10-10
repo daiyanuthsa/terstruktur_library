@@ -6,7 +6,7 @@
     <title>Perpustakaan</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
-    <!-- Mengimpor CSS tambahan untuk side navigation -->
+    
 </head>
 <body>
 <div class="sidenav">
@@ -62,9 +62,15 @@
       </div>
     </div>
 
-    <div><div class="Available shadow p-3 mb-5 bg-body-tertiary rounded">
-      <h4 class="fw-bold">Buku Tersedia</h4>
+    <div>
+      <div class="available shadow p-3 mb-5 bg-body-tertiary rounded">
+        <div class="available-head">
+        <h4 class="fw-bold">Buku Tersedia</h4>
+        <a href="" class="more">More Books Here > </a>
+        </div>
+      
       <div class="cards">
+
       <div class="available-card">
         <img src="asset/book-cover.png" alt="book-cover">
         <div class="book-desc">
@@ -73,10 +79,20 @@
           <button type="button" class="btn btn-dark">Add To Cart</button>
         </div>
       </div>
+
       <div class="available-card">
         <img src="asset/book-cover.png" alt="book-cover">
         <div class="book-desc">
-          <h6>100 Years of Solitude</h6>
+          <h6>100 Years of Solitude</h6> 
+          <p>R.A Kartini - 2005</p>
+          <button type="button" class="btn btn-dark">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="available-card">
+        <img src="asset/book-cover.png" alt="book-cover">
+        <div class="book-desc">
+          <h6>100 Years of Solitude</h6> 
           <p>R.A Kartini - 2005</p>
           <button type="button" class="btn btn-dark">Add To Cart</button>
         </div>

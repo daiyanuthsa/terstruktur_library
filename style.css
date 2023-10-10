@@ -9,6 +9,16 @@
   padding-top: 20px;
 }
 
+.more {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.more:hover {
+  text-decoration: none;
+}
+
 .sidenav a {
   padding: 15px 25px;
   font-weight: 600;
@@ -84,15 +94,28 @@
 .available-card {
   display: flex;
   height: 200px;
-  background-color: #1a4178;
+  background-color: #fff;
   padding: 12px;
   border-radius: 8px;
-  width: 520px;
-  color: white;
+  width: 360px;
+  color: black;
 }
 
 .navbar {
   display: flex;
   margin: 20px auto;
   justify-content: center;
+}
+
+.available {
+  margin: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.available-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
