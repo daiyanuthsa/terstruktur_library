@@ -82,12 +82,21 @@
         <a href="" class="more">More Books Here > </a>
         </div>
       
-      <div class="cards">
+      <div class="available-cards">
 
       <div class="available-card">
         <img src="asset/book-cover.png" alt="book-cover">
         <div class="book-desc">
           <h6>100 Years of Solitude</h6>
+          <p>R.A Kartini - 2005</p>
+          <button type="button" class="btn btn-dark">Add To Cart</button>
+        </div>
+      </div>
+
+      <div class="available-card">
+        <img src="asset/book-cover.png" alt="book-cover">
+        <div class="book-desc">
+          <h6>100 Years of Solitude</h6> 
           <p>R.A Kartini - 2005</p>
           <button type="button" class="btn btn-dark">Add To Cart</button>
         </div>

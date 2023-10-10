@@ -73,6 +73,14 @@
   gap: 40px;
 }
 
+.available-cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 400px; /* Ubah tinggi sesuai dengan kebutuhan Anda */
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
 .borrowed-card {
   display: flex;
   height: 200px;
@@ -97,7 +105,7 @@
   background-color: #fff;
   padding: 12px;
   border-radius: 8px;
-  width: 360px;
+  width: calc(33.33% - 20px);
   color: black;
 }
 
