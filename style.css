@@ -1,0 +1,98 @@
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 15px 25px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  color: #1a4178;
+  display: block;
+  border-radius: 8px;
+}
+
+.sidenav a:hover {
+  background-color: rgba(26, 65, 120, 0.2);
+}
+
+/* CSS untuk konten halaman */
+.content {
+  margin-left: 260px;
+  padding: 20px;
+}
+
+.logo {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+
+.input-group {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.form-floating {
+  width: 480px;
+}
+
+.banner {
+  margin: 12px;
+  color: #1a4178;
+}
+
+.borrowed {
+  margin: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.cards {
+  display: flex;
+  gap: 40px;
+}
+
+.borrowed-card {
+  display: flex;
+  height: 200px;
+  background-color: #1a4178;
+  padding: 12px;
+  border-radius: 8px;
+  width: 520px;
+  color: white;
+}
+
+.book-desc {
+  margin-inline: 24px;
+  grid-auto-flow: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.available-card {
+  display: flex;
+  height: 200px;
+  background-color: #1a4178;
+  padding: 12px;
+  border-radius: 8px;
+  width: 520px;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+}
