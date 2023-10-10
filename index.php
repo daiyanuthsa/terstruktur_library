@@ -69,6 +69,27 @@
           <button type="button" class="btn btn-dark">Kembalikan</button>
         </div>
       </div>
+      
+      <div class="borrowed-card">
+        <img src="asset/book-cover.png" alt="book-cover">
+        <div class="book-desc">
+          <h6>100 Years of Solitude</h6>
+          <p>R.A Kartini - 2005</p>
+          <p>Durasi Peminjaman : 2 Hari</p>
+          <button type="button" class="btn btn-dark">Kembalikan</button>
+        </div>
+      </div>
+
+      <div class="borrowed-card">
+        <img src="asset/book-cover.png" alt="book-cover">
+        <div class="book-desc">
+          <h6>100 Years of Solitude</h6>
+          <p>R.A Kartini - 2005</p>
+          <p>Durasi Peminjaman : 2 Hari</p>
+          <button type="button" class="btn btn-dark">Kembalikan</button>
+        </div>
+      </div>
+
       <div class="borrowed-card">
         <img src="asset/book-cover.png" alt="book-cover">
         <div class="book-desc">
