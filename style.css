@@ -70,7 +70,10 @@
 
 .cards {
   display: flex;
-  gap: 40px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  margin-top: 20px;
+  gap: 10px;
 }
 
 .available-cards {
@@ -83,11 +86,11 @@
 
 .borrowed-card {
   display: flex;
-  height: 200px;
+  height: 264px;
   background-color: #1a4178;
   padding: 12px;
   border-radius: 8px;
-  width: 520px;
+  width: calc(33.33% - 20px);
   color: white;
 }
 
