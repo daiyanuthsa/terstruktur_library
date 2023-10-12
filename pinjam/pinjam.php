@@ -1,4 +1,6 @@
+
 <?php
+
 include "read-cart.php";
 include "add-cart.php";
 include "delete-cart.php";
@@ -28,3 +30,4 @@ switch ($fitur) {
 }
 
 ?>
+        <!-- Mengimpor Bootstrap JS dan jQuery -->
